@@ -1,0 +1,159 @@
+
+@import url('media-queries.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap');
+
+*{
+    color: #64ffda;
+    font-family: 'Open Sans' ;
+}
+
+body{
+    background-color: #0a192f;
+    transition: all ease-in 300ms;  
+}
+.game-container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-container{
+    text-align: center;
+    width: 90vw;
+}
+.title-container h1{
+    font-size: 1.5rem;
+    font-weight: 7  00;
+}
+
+
+
+
+/*//////////////*/
+/*//FEEDBACK////*/
+/*//////////////*/
+
+.message-container{
+    min-height: 7.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    border-radius: 10px;
+    padding: 7.5px;
+    margin: 0.5rem 0;
+}
+ p.win{
+    background-color: #538d4e;
+}
+ p.lose{
+    background-color: #d8300b;
+    color: white;
+}
+
+
+
+
+
+/*//////////////*/
+/*///TILES//////*/
+/*//////////////*/
+
+.tile-container{
+    margin-bottom: max(5vh,40px);
+}
+.tile-container .tile{
+    width: 15vw;
+    height: 15vw;
+    max-width: 50px;
+    max-height: 50px;
+    border: 1.5px solid #64ffda;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin: 2px;
+    align-items: center;
+}
+.tile-container div{
+    display: flex;
+}
+
+
+
+
+
+/*//////////////*/
+/*///KEYBOARD///*/
+/* /////////////*/
+
+.key-container{
+    width: 90vw;
+    max-width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.key-container button{
+    width: 43px;
+    height: 58px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    margin: 4px;
+}
+.key-container button:hover{
+    border-radius: 4px;
+    color: #0a192f;
+    background-color:  #64ffda;
+    margin: 4px;
+}
+.key-container button:nth-child(11){
+    margin-left: 30px;
+}
+
+.key-container button:nth-child(20),
+.key-container button:nth-child(28){
+    width: 68px;
+}
+
+
+
+/* ////////////*/
+/* TILE FLIPPING*/
+/* /////////// */
+
+@keyframes flipping{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+.tile.flip{
+    animation: 0.5s linear flipping;
+}
+
+
+.grey-tile{
+    background-color: #3a3a3c !important ;
+    border: none !important;
+}
+.yellow-tile{
+    background-color: #b59f3a !important ;
+    border: none !important;
+}
+.green-tile{
+    background-color: #538d4e !important;
+    border: none !important;
+}
+.wrong-tile{
+    border: #ff6464 !important;
+}
+
