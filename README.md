@@ -1,2 +1,2 @@
 # WORDLE
- 
+ ## The Challenge
